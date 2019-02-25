@@ -1,1 +1,1 @@
-# JSONPlaceholder - application which is downloading list of 100 posts, saving separetly each of post to json file and showing list in web browser.
+# JSONPlaceholder - application which is downloading list of 100 posts, saving separetly each of post to json file and showing list in web browser(in wrok_branch - latest commit - list of 100 post already saved in default location, main folder of project).
