@@ -6,16 +6,18 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+
+// encja stworzona z odpowiednimi polami do mapowania postow w formacie Json
 @Entity
 @Getter
 @Setter
 public class JsonPlaceholderData {
 
+    private Long userId;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private Long userId;
 
     @Column(length = 2000)
     private String title;
@@ -30,5 +32,16 @@ public class JsonPlaceholderData {
     }
 
     public JsonPlaceholderData() {
+    }
+
+    // nadpisanie metody strong zeby wywolana w kontrolerze zapisywala posty w formacie json
+    @Override
+    public String toString() {
+        return "JsonPlaceholderData{" + "\n" +
+                 " userId " + " : " + userId+ "\n"+
+                 " id" + " : " + id + "\n"+
+                " title"+ " : " + "\""+ title  + "\""+"\n"+
+                " body" + " : " + "\""+body+ "\""+ "\n" +
+                '}';
     }
 }
